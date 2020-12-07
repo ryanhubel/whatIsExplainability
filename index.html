@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Explainability?</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h1>What is explainability in machine learning?</h1>
+
+<br>
+
+<h2>
+  Explainability is the extent to which the reason WHY a decision was made can be understood.
+</h2>
+
+<br>
+<hr>
+<hr>
+<br>
+
+<h3>
+  Without explainability, we don’t understand the details of why an algorithm is making certain decisions, we can only
+  observe that it generally makes good ones. Furthermore, if, at some point, the algorithm seems to make a
+  completely unreasonable decision, we cannot justify why it did that. This has implications for many use cases:
+  high-risk cases [1], scientific discovery [2], legal usage of user data [3],[4], and the actual process of
+  programming these algorithms [5].
+</h3>
+
+<br>
+
+<div class="accordion">
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section2" class="accordion__input">
+    <label for="section2" class="accordion__label">What are the legal/ethical implications for high-risk use
+      cases?</label>
+    <div class="accordion__content">
+      <p>
+        In many high-risk use cases, such as self-driving cars, it is very important that if something goes wrong, we
+        can figure out what went wrong [1]. A lack of explainability heavily limits this, since we can’t directly
+        observe why the algorithm made its decisions.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section3" class="accordion__input">
+    <label for="section3" class="accordion__label">How does explainability relate to scientific discovery?</label>
+    <div class="accordion__content">
+      <p>
+        Explainability is a crucial factor in using machine learning for scientific discovery [2]. The end goal of this
+        use case is not to simply produce a model that is effective; the goal is to observe the function of the model,
+        searching to see if it has done anything novel. Since explainability heavily enables such observation, a lack of
+        it heavily hampers such use cases.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section4" class="accordion__input">
+    <label for="section4" class="accordion__label">What does a lack of explainability mean for user data?</label>
+    <div class="accordion__content">
+      <p>
+        Most of the popular machine learning algorithms tend towards a lack of explainability. When user data is applied
+        to such algorithms, a lack of explainability means that the way the user data is being used cannot be fully
+        explained either [3]. While efforts can be made to anonymize this data, not even those in charge of such
+        algorithms have a complete understanding as to exactly how any one user’s data is being used. This is a legal
+        problem as well, since it prevents users from being meaningfully informed of what their data is being used for
+        [4].
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section5" class="accordion__input">
+    <label for="section5" class="accordion__label">How does explainability change the programming of these
+      algorithms?</label>
+    <div class="accordion__content">
+      <p>
+        Explainability would make the process of debugging and tuning these algorithms substantially easier [5].
+        Improving upon unexplainable algorithms is largely a matter of trial and error, where the programmer is really
+        just guessing at what might improve performance. If the function of the algorithm can be clearly understood,
+        then the programmer can directly solve problems, rather than repeatedly making changes in hopes that one will
+        work.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<hr>
+<hr>
+<br>
+
+<h3>
+  Many of the most popular machine learning algorithms are highly complex, to the point where meaningful explanation
+  becomes extremely difficult.
+</h3>
+
+<br>
+
+<div class="accordion">
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section6" class="accordion__input">
+    <label for="section6" class="accordion__label">Why use complex algorithms to begin with?</label>
+    <div class="accordion__content">
+      <p>
+        This allows the algorithms to learn patterns that are more intricate [5]. When machine learning algorithms are
+        less complex, they are generally more dependent on the programmer to directly provide them with the relevant
+        factors for decision making. More complex algorithms can determine relevant factors largely on their own.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section7" class="accordion__input">
+    <label for="section7" class="accordion__label">Can complex algorithms still be explained, with sufficient
+      effort?</label>
+    <div class="accordion__content">
+      <p>
+        Somewhat. Efforts have certainly been made on this front, with varying degrees of success. Generally speaking,
+        attempts to do this focus on a single aspect of the algorithm, in order to simplify things to where they can be
+        explained. Some examples of this include:
+      </p>
+      <ul>
+        <li>Providing a description about how this type of algorithm works in general [4]</li>
+        <li>Following the path of an example data point through the model [4]</li>
+        <li>Visualizing how each of the inputs influence the final output on their own (eg. Showing that a large change
+          to the second input is enough to change the final result) [6],[7]
+        </li>
+        <li>Visualizing the relationships between the inputs (eg. Showing that a large change to both the third and
+          fourth input would have a large impact, when a change to just one would have minimal impact) [6],[7]. This
+          approach tends to run into issues, however, if a relationship involving more than 2 or 3 inputs is relevant,
+          since visualization at higher dimensions is very difficult
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <input type="checkbox" name="explainability-accordion" id="section8" class="accordion__input">
+    <label for="section8" class="accordion__label">Could these algorithms be changed such that they would be more
+      explainable?</label>
+    <div class="accordion__content">
+      <p>
+        Maybe. It’s difficult to say what the best approach to this would be (if it was easy, explainability wouldn’t be
+        a problem). At the moment, however, explainability is largely thought of as something to be concerned about
+        after the algorithm has learned the highest-performance solution [4],[6],[7]. Perhaps the algorithms could be structured
+        such that they would not only consider performance when learning the best solution, but to also consider the
+        eventual explainability. While there would likely be a minor loss in performance, in many use cases,
+        explainability is so crucial that a minor sacrifice in performance would easily be worth a substantial
+        improvement to explainability (eg. scientific discovery [2]).
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<hr>
+<hr>
+<br>
+
+<h3>
+  References:
+</h3>
+
+<p>
+  [1] A. Bibal, M. Lognoul, A. de Streel, and B. Frénay, "Legal requirements on explainability in machine learning,"
+  Curr. Issues Educ., vol. 28, July 2020. [Online]. doi: https://doi.org/10.1007/s10506-020-09270-4<br><br>
+  [2] R. Roscher, B. Bohn, M. Duarte, and J. Garcke, " Explainable machine learning for scientific insights and
+  discoveries," IEEE Access, vol. 8, Feb 2020. [Online]. doi: https://doi.org/10.1109/ACCESS.2020.2976199<br><br>
+  [3] U. Bhatt et al, "Explainable machine learning in deployment," in FAT* '20: Proc. 2020 Conf. Fairness, Account.,
+  Transp., Jan 2020. [Online]. Available: https://dl.acm.org/doi/abs/10.1145/3351095.3375624. [Accessed Sep. 21,
+  2020].<br><br>
+  [4] T. Spinner, U. Schlegel, H. Schäfer, and M. El-Assady, "explAIner: A visual analytics framework for interactive
+  and explainable machine learning," IEEE Trans. Vis. Comput. Graph., vol. 26, no. 1, Jan 2020. [Online]. doi:
+  https://doi.org/10.1109/TVCG.2019.2934629<br><br>
+  [5] R. Goebel et al, “Explainable AI: The new 42?”, Lect. Notes Comput. Sci., vol 11015, August 2018. [Online]. doi:
+  https://doi.org/10.1007/978-3-319-99740-7_21<br><br>
+  [6] S. Lundberg et al, "From local explanations to global understanding with explainable AI for trees," Nature Mach.
+  Intell., vol. 2, Jan 2020. [Online]. doi: https://doi.org/10.1038/s42256-019-0138-9<br><br>
+  [7] C. Yeung et al, "Elucidating the behavior of nanophotonic structures through explainable machine learning
+  algorithms," ACS Photon., vol. 7, no. 8, July 2020. [Online]. doi:
+  https://doi.org/10.1021/acsphotonics.0c01067<br><br>
+</p>
+
+</body>
+</html>
