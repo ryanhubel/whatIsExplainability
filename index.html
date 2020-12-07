@@ -22,10 +22,10 @@
 <br>
 
 <h3>
-  Without explainability, we don’t understand the details of why an algorithm is making certain decisions, we can only
-  observe that it generally makes good ones. Furthermore, if, at some point, the algorithm seems to make a
+  Without explainability, we can't understand the details of why an algorithm is making certain decisions, we can only
+  observe whether it generally makes good ones. Furthermore, if, at some point, the algorithm seems to make a
   completely unreasonable decision, we cannot justify why it did that. This has implications for many use cases:
-  high-risk cases [1], scientific discovery [2], legal usage of user data [3],[4], and the actual process of
+  high-risk cases [1], scientific discovery [2], usage of user data [3],[4], and the actual process of
   programming these algorithms [5].
 </h3>
 
@@ -65,8 +65,8 @@
     <div class="accordion__content">
       <p>
         Most of the popular machine learning algorithms tend towards a lack of explainability. When user data is applied
-        to such algorithms, a lack of explainability means that the way the user data is being used cannot be fully
-        explained either [3]. While efforts can be made to anonymize this data, not even those in charge of such
+        to such algorithms, the manner in which the user data is being used cannot be fully explained either [3]. While
+        efforts can be made to anonymize this data, not even those in charge of such
         algorithms have a complete understanding as to exactly how any one user’s data is being used. This is a legal
         problem as well, since it prevents users from being meaningfully informed of what their data is being used for
         [4].
@@ -80,7 +80,7 @@
       algorithms?</label>
     <div class="accordion__content">
       <p>
-        Explainability would make the process of debugging and tuning these algorithms substantially easier [5].
+        Explainability would make the process of debugging and adjusting these algorithms substantially easier [5].
         Improving upon unexplainable algorithms is largely a matter of trial and error, where the programmer is really
         just guessing at what might improve performance. If the function of the algorithm can be clearly understood,
         then the programmer can directly solve problems, rather than repeatedly making changes in hopes that one will
@@ -150,7 +150,8 @@
       <p>
         Maybe. It’s difficult to say what the best approach to this would be (if it was easy, explainability wouldn’t be
         a problem). At the moment, however, explainability is largely thought of as something to be concerned about
-        after the algorithm has learned the highest-performance solution [4],[6],[7]. Perhaps the algorithms could be structured
+        after the algorithm has learned the highest-performance solution [4],[6],[7]. Perhaps the algorithms could be
+        structured
         such that they would not only consider performance when learning the best solution, but to also consider the
         eventual explainability. While there would likely be a minor loss in performance, in many use cases,
         explainability is so crucial that a minor sacrifice in performance would easily be worth a substantial
@@ -171,9 +172,8 @@
 </h3>
 
 <br>
-  
+
 <p>
-  <br>
   [1] A. Bibal, M. Lognoul, A. de Streel, and B. Frénay, "Legal requirements on explainability in machine learning,"
   Curr. Issues Educ., vol. 28, July 2020. [Online]. doi: https://doi.org/10.1007/s10506-020-09270-4<br><br>
   [2] R. Roscher, B. Bohn, M. Duarte, and J. Garcke, " Explainable machine learning for scientific insights and
